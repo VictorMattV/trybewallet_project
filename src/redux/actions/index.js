@@ -1,2 +1,8 @@
-// Coloque aqui suas actions
-// initial commit
+export const SAVE_EMAIL = 'SAVE_EMAIL';
+
+const saveEmailAction = (email) => ({
+  type: SAVE_EMAIL,
+  email,
+});
+
+export default saveEmailAction;
