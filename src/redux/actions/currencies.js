@@ -7,11 +7,9 @@ export const receiveCurrenciesSuccess = (currencies) => ({
   currencies,
 });
 
-export function fetchCurrencies() {
-  return async (dispatch) => {
-    // fetch api
-    const response = await getCurrenciesInfo();
-    dispatch(receiveCurrenciesSuccess(Object.keys(response)
-      .filter((currency) => currency !== 'USDT')));
-  };
-}
+export const fetchCurrencies = () => async (dispatch) => {
+  // fetch api
+  const response = await getCurrenciesInfo();
+  dispatch(receiveCurrenciesSuccess(Object.keys(response)
+    .filter((currency) => currency !== 'USDT')));
+};
