@@ -3,13 +3,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Header extends Component {
-  componentDidMount() {
-
-  }
-
   render() {
     const { emailSaved, expenses } = this.props;
-    console.log(expenses);
     return (
       <div>
 

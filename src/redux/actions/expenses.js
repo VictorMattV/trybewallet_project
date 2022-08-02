@@ -10,6 +10,5 @@ export const saveExpensesAction = (currencies, expenseInfo) => ({
 
 export const fetchExchange = (expenseInfo) => async (dispatch) => {
   const response = await getCurrenciesInfo();
-  const result = dispatch(saveExpensesAction(response, expenseInfo));
-  console.log(result);
+  return dispatch(saveExpensesAction(response, expenseInfo));
 };
