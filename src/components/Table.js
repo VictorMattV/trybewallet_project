@@ -71,4 +71,6 @@ const mapDispatchToProps = (dispatch) => ({
   removeExpense: (id) => dispatch(removeExpenseAction(id)),
 });
 
+// comitando denovo
+
 export default connect(mapStateToProps, mapDispatchToProps)(Table);
