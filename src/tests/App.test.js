@@ -54,7 +54,22 @@ describe('Testes na aplicação' , () => {
     
     const emailInput = screen.getByTestId('email-field');
     expect(emailInput).toBeInTheDocument;
+  });
+
+  it('Testa se é renderizado o botão de remover dispesa', () => {
+    renderWithRedux(<Wallet />);
     
+    const expenseValue = screen.getByTestId('value-input');
+    userEvent.type(expenseValue, '555' );
+
+    const expenseDescription = screen.getByTestId('description-input');
+    userEvent.type(expenseDescription, 'teste');
+
+    const expenseAdd = screen.getByText(/adicionar despesa/i);
+    userEvent.click(expenseAdd);
+
+    const expenseRm = screen.getByTestId('delete-btn');
+    expect(expenseRm).toBeInTheDocument;
   });
 });
   
