@@ -1,4 +1,4 @@
-# trybeWallet Project
+# Trybewallet
 
 # Tecnologies
 
