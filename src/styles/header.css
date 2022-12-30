@@ -1,0 +1,33 @@
+header {
+  align-items: center;
+  background-color: rgb(119, 150, 175);
+  color: rgba(255, 255, 255, 0.918);
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 35px;
+}
+
+header h3 {
+  font-size: 1.8rem;
+  font-weight: 550;
+}
+
+header section {
+  display: flex;
+  gap: 15px;
+}
+
+.title {
+  color: rgba(255, 255, 255, 0.918);
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+.email_container {
+  font-size: 1.1rem;
+}
+
+.total_container {
+  font-size: 1.1rem;
+  text-align: center;
+}

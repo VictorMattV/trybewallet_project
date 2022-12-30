@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import saveEmailAction from '../redux/actions/index';
+import '../styles/login.css';
 
 class Login extends React.Component {
   constructor() {
@@ -24,7 +25,8 @@ class Login extends React.Component {
 
   checkmail = () => {
     const { email } = this.state;
-    if (email.includes('@') && email.includes('.com')) { return true; }
+    const regex = new RegExp('^[A-Za-z0-9+_.-]+@(.+)+(com)$');
+    if (regex.test(email)) { return true; }
   }
 
   onChange = ({ target }) => {
@@ -46,38 +48,38 @@ class Login extends React.Component {
     const { disableBtn, email, password } = this.state;
     const { history, saveEmailState } = this.props;
     return (
-      <div>
-        Login
-        <form>
-          <label htmlFor="email">
-            email:
-            <input
-              data-testid="email-input"
-              value={ email }
-              type="email"
-              onChange={ this.onChange }
-            />
-          </label>
-          <label htmlFor="password">
-            senha:
-            <input
-              data-testid="password-input"
-              value={ password }
-              type="password"
-              onChange={ this.onChange }
-            />
-          </label>
-          <button
-            type="button"
-            disabled={ disableBtn }
-            onClick={ () => {
-              saveEmailState(email);
-              history.push('/carteira');
-            } }
-          >
-            Entrar
-          </button>
-        </form>
+      <div className="login_container">
+        <p>TrybeWallet</p>
+
+        <label htmlFor="email">
+          <input
+            placeholder="email"
+            data-testid="email-input"
+            value={ email }
+            type="email"
+            onChange={ this.onChange }
+          />
+        </label>
+        <label htmlFor="password">
+          <input
+            placeholder="senha"
+            data-testid="password-input"
+            value={ password }
+            type="password"
+            onChange={ this.onChange }
+          />
+        </label>
+        <button
+          type="button"
+          disabled={ disableBtn }
+          onClick={ () => {
+            saveEmailState(email);
+            history.push('/carteira');
+          } }
+        >
+          Entrar
+        </button>
+
       </div>
     );
   }

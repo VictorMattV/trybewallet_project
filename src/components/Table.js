@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { removeExpenseAction } from '../redux/actions/expenses';
+import '../styles/table.css';
 
 class Table extends Component {
   render() {
     const { expenses, removeExpense } = this.props;
     return (
       <div>
-        Tabela de gastos
         <table>
           <thead>
             <tr>
@@ -20,7 +20,7 @@ class Table extends Component {
               <th>Câmbio utilizado</th>
               <th>Valor convertido</th>
               <th>Moeda de conversão</th>
-              <th>Editar/Excluir</th>
+              <th>Excluir</th>
             </tr>
           </thead>
           <tbody>
@@ -68,6 +68,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+
   removeExpense: (id) => dispatch(removeExpenseAction(id)),
 });
 

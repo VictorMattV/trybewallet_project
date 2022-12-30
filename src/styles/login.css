@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(22, 33, 43);
+}
+
+.login_container {
+  align-items: center;
+  color: rgba(255, 255, 255, 0.918);
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  gap: 15px;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.login_container p {
+  color: rgba(255, 255, 255, 0.918);
+  font-size: 50px;
+  padding: 15px;
+}
+
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.589);
+}
+
+.login_container label {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+}
+
+.login_container input {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  color: black;
+  font-family: var(--font1);
+  font-size: 1.2rem;
+  padding: 12px;
+  width: 300px;
+}
+
+.login_container button {
+  background-color: #003be5;
+  border-radius: 5px;
+  color: white;
+  font-family: var(--font);
+  font-size: 1.2rem;
+  padding: 6px;
+  width: 300px;
+}
+
+.login_container button:hover {
+  cursor: pointer;
+}
+
+.login_container button:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+}
+

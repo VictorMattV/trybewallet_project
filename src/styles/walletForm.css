@@ -1,0 +1,39 @@
+form {
+  color: white;
+  display: flex;
+  font-size: 1.2rem;
+  gap: 15px;
+  justify-content: space-around;
+  padding: 15px;
+}
+
+form label {
+  color: rgba(255, 255, 255, 0.918);
+  flex-grow: 1;
+}
+
+form label input {
+  border: black 1px solid;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 5px;
+  width: 95%;
+}
+
+form label select {
+  border: black 1px solid;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 5px;
+  width: 95%;
+}
+
+form button {
+  background-color: #003be5;
+  border-radius: 5px;
+  color: white;
+  font-family: var(--font);
+  font-weight: 500;
+  padding: 10px;
+}
+

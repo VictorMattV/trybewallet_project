@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchCurrencies } from '../redux/actions/currencies';
 import { fetchExchange } from '../redux/actions/expenses';
+import '../styles/walletForm.css';
 
 class WalletForm extends Component {
   constructor() {
@@ -105,6 +106,8 @@ class WalletForm extends Component {
               </label>
 
               <label htmlFor="tag">
+                Tag:
+                {' '}
                 <select
                   id="tag"
                   data-testid="tag-input"
