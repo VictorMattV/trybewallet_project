@@ -7,7 +7,7 @@
 - HTML;
 - CSS;
 
-# How to run the project
+# How to run this project
 
 - Clone the repository;
 - Navigate to the folder and install the dependencies with `npm install`;
